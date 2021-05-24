@@ -64,6 +64,7 @@ export class Todo extends Component {
                         className="m-1"
                         style={this.floatRight()}
                         onChange={this.toggle.bind(this)}
+                        checked={this.props.todo.complete ? "checked" : ""}
                     />
                 </h3>
             </div>
