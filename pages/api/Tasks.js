@@ -42,7 +42,7 @@ export default async (req, res) => {
 
         db.collection("todos").findOneAndUpdate(
             { _id: mongodb.ObjectId(req.body.data.id) },
-            { $set: { complete: !req.body.data.complete } },
+            { $set: { complete: req.body.data.complete } },
             {upsert: true},
             function () {
                 res.send("The task is done!");

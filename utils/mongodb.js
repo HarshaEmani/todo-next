@@ -27,7 +27,7 @@ export async function connectToDatabase() {
 
   const client = await MongoClient.connect(uri, {
     useNewUrlParser: true,
-    // useUnifiedTopology: true,
+    useUnifiedTopology: true,
   })
 
   const db = await client.db(dbName)
